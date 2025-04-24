@@ -43,7 +43,7 @@ SVARIV<-function(ydata, z, p, confidence, NWlags, norm, scale, horizons,ci_type=
                 Z=z,
                 n=ncol(ydata))
 
-  RForm<-RForm_VAR(SVARinp$ydata, p)
+  RForm<-RForm_VAR(SVARinp$ydata, p, W)
   RForm$Gamma<-RForm$eta%*%SVARinp$Z[(p+1):length(SVARinp$Z)]/ncol(RForm$eta)
   RForm$Y0         = SVARinp$ydata[1:p,]
   RForm$externalIV = SVARinp$Z[(p+1):length(SVARinp$Z)]
