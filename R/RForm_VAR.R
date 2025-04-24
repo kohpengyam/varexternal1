@@ -14,7 +14,7 @@
 #'
 #' @seealso https://github.com/jm4474/SVARIV
 #' @export
-RForm_VAR<-function(TSL,p,W=w){
+RForm_VAR<-function(TSL,p,W){
   for(i in 1:p){
     if(i==1){
       aux<-xts::lag.xts(TSL,k=i)
