@@ -3,7 +3,7 @@
 #' Provides reduced form estimators of a VAR(p) model
 #' @param TSL matrix of time series
 #' @param p number of lags in the VAR model
-#' @param W Matrix of exogenous regressors
+#' @param W Matrix of exogenous regressors. set to null if there are no exogenous regressors
 #' @return AL Least-squares estimator of the VAR coefficients
 #' @return Sigma Least-squares estimator of the VAR residuals
 #' @return eta VAR model residuals
